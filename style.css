@@ -1,0 +1,248 @@
+html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            
+            width: 98vw;
+            cursor: none;
+        }
+
+        .cursor {
+            position: absolute;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        
+        .container {
+            width: 98%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .row1 {
+            width: 5%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row2 {
+            padding-left: 3%;
+            padding-top: 5vh;
+            width: 45%;
+            height: 95vh;
+            justify-content: center;
+        }
+
+        .row3 {
+            width: 40%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dots{
+            margin-top: 5vh;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .line{
+            width: 100%;
+            height: 1px;
+            background-color: #ffffff;
+            margin-top: 8vh;
+        }
+
+        .row4 {
+            width: 3%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: #ffffff;
+            align-items: center;
+        }
+
+        .pic {
+            width: 30px;
+            height: 30px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        .dot:hover {
+            background-color: #0ebcad;
+        }
+
+        .dot:hover::after {
+            content: "Home";
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #0ebcad;
+        }
+
+        .color1 {
+            color: #ffffff;
+        }
+
+        .font1 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .font2 {
+            font-family: 'REM', sans-serif;
+        }
+
+        .button1 {
+            margin-top: 5vh;
+            background: transparent;
+            border: 3px solid #ffffff;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-family: 'REM', sans-serif;
+        }
+
+        .button1:hover {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #0ebcad;
+        }
+
+
+        .big {
+            z-index: 9999;
+            border: none;
+            width: 22px;
+            height: 22px;
+            border: 4px solid #ffffff;
+            background-color: white;
+            border-radius: 50%;
+            animation-name: stretch;
+            animation-duration: 2.0s;
+            animation-timing-function: ease-out;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        @keyframes stretch {
+            0% {
+                opacity: 0.2;
+                background-color: rgb(110, 0, 0);
+                border-radius: 100%;
+            }
+
+            20% {
+                background-color: #fff71b;
+            }
+
+            40% {
+                background-color: #11bc0e;
+            }
+
+            60% {
+                background-color: #40f2ff;
+            }
+
+            80% {
+                background-color: #0727da;
+            }
+
+            100% {
+                background-color: #530b49;
+            }
+        }
+
+
+        /* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin-right: 5vw;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ddd;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: 5vw;
+  }
+  
+  /* Container around content */
+  .scontainer {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .scontainer::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #ddd;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .scontainer.left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .scontainer.right {
+    left: 55.5%;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .scontainer.right::after {
+    left: 0px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
